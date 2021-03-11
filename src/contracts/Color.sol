@@ -13,7 +13,7 @@ contract Color is ERC721 {
 
     return ids._items[_item] = ++ids.size;
   }
-  function hasItem(string memory _item) private returns(bool) {
+  function hasItem(string memory _item) private view returns(bool) {
     return ids._items[_item] > 0;
   }
   constructor() ERC721() public {}
